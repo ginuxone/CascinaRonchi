@@ -2,6 +2,7 @@ import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/
 import {
   provideClientHydration,
   withEventReplay,
+  withI18nSupport,
   withIncrementalHydration,
 } from '@angular/platform-browser';
 import { provideRouter, withInMemoryScrolling } from '@angular/router';
@@ -15,6 +16,6 @@ export const appConfig: ApplicationConfig = {
       routes,
       withInMemoryScrolling({ anchorScrolling: 'enabled', scrollPositionRestoration: 'enabled' }),
     ),
-    provideClientHydration(withEventReplay(), withIncrementalHydration()),
+    provideClientHydration(withEventReplay(), withI18nSupport(), withIncrementalHydration()),
   ],
 };
