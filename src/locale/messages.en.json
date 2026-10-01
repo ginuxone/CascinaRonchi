@@ -1,0 +1,10 @@
+{
+  "locale": "en",
+  "translations": {
+    "home.title": "Agriturismo Cascina Ronchi",
+    "home.tagline": " Goats, home cooking and hospitality in {$INTERPOLATION}, in the hills of Bergamo. ",
+    "notFound.title": "Page not found",
+    "notFound.home": "Back to home",
+    "privacy.title": "Privacy"
+  }
+}

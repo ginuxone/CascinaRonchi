@@ -1,0 +1,10 @@
+{
+  "locale": "de",
+  "translations": {
+    "home.title": "Agriturismo Cascina Ronchi",
+    "home.tagline": " Ziegen, Hausmannskost und Gastfreundschaft in {$INTERPOLATION}, in den Hügeln von Bergamo. ",
+    "notFound.title": "Seite nicht gefunden",
+    "notFound.home": "Zurück zur Startseite",
+    "privacy.title": "Datenschutz"
+  }
+}

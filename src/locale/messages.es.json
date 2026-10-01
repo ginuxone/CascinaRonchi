@@ -1,0 +1,10 @@
+{
+  "locale": "es",
+  "translations": {
+    "home.title": "Agriturismo Cascina Ronchi",
+    "home.tagline": " Cabras, cocina casera y hospitalidad en {$INTERPOLATION}, en las colinas de Bérgamo. ",
+    "notFound.title": "Página no encontrada",
+    "notFound.home": "Volver al inicio",
+    "privacy.title": "Privacidad"
+  }
+}

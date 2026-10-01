@@ -3,7 +3,9 @@
   "version": 1,
   "cli": {
     "packageManager": "npm",
-    "schematicCollections": ["angular-eslint"]
+    "schematicCollections": [
+      "angular-eslint"
+    ]
   },
   "newProjectRoot": "projects",
   "projects": {
@@ -30,7 +32,15 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.scss"]
+            "styles": [
+              "src/styles.scss"
+            ],
+            "polyfills": [
+              "@angular/localize/init"
+            ],
+            "server": "src/main.server.ts",
+            "outputMode": "static",
+            "localize": true
           },
           "configurations": {
             "production": {
@@ -51,7 +61,8 @@
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "localize": false
             }
           },
           "defaultConfiguration": "production"
@@ -74,7 +85,34 @@
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
+        }
+      },
+      "i18n": {
+        "sourceLocale": {
+          "code": "it",
+          "subPath": ""
+        },
+        "locales": {
+          "en": {
+            "translation": "src/locale/messages.en.json",
+            "subPath": "en"
+          },
+          "es": {
+            "translation": "src/locale/messages.es.json",
+            "subPath": "es"
+          },
+          "de": {
+            "translation": "src/locale/messages.de.json",
+            "subPath": "de"
+          },
+          "fr": {
+            "translation": "src/locale/messages.fr.json",
+            "subPath": "fr"
           }
         }
       }
