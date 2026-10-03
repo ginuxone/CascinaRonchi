@@ -1,0 +1,50 @@
+@use '../../../styles/mixins' as *;
+
+// Fixed overlay: it appears after load, so it must not take space in the flow (CLS).
+.banner {
+  position: fixed;
+  inset-inline: var(--space-3);
+  bottom: calc(var(--cta-bar-h) + env(safe-area-inset-bottom) + var(--space-3));
+  z-index: 45;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-sm);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+
+  @include up(md) {
+    inset-inline: var(--space-5) auto;
+    max-width: 26rem;
+  }
+}
+
+p {
+  flex: 1;
+  margin: 0;
+}
+
+a {
+  font-weight: 600;
+}
+
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  color: var(--color-text);
+  background: transparent;
+  border: 0;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+
+  &:hover {
+    background: var(--color-surface-alt);
+  }
+}

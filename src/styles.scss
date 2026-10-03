@@ -14,8 +14,18 @@ html {
   scroll-padding-top: var(--space-8);
 }
 
+// Height of the mobile bottom CTA bar (see FloatingCta); the page keeps that much room below its content.
+:root {
+  --cta-bar-h: 4.25rem;
+
+  @include up(md) {
+    --cta-bar-h: 0rem;
+  }
+}
+
 body {
   margin: 0;
+  padding-bottom: calc(var(--cta-bar-h) + env(safe-area-inset-bottom));
   background: var(--color-bg);
   -webkit-font-smoothing: antialiased;
 }
@@ -43,6 +53,26 @@ a {
   outline: 3px solid var(--color-focus);
   outline-offset: 3px;
   border-radius: var(--radius-sm);
+}
+
+main:focus {
+  outline: none;
+}
+
+.skip-link {
+  position: absolute;
+  top: var(--space-2);
+  left: var(--space-2);
+  z-index: 100;
+  padding: var(--space-2) var(--space-4);
+  color: var(--color-on-primary);
+  background: var(--color-primary);
+  border-radius: var(--radius-pill);
+  transform: translateY(-300%);
+
+  &:focus {
+    transform: none;
+  }
 }
 
 // Layout primitives

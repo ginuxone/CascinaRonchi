@@ -4,7 +4,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   selector: 'app-privacy-page',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <main id="main">
+    <main id="main" tabindex="-1">
       <h1 i18n="@@privacy.title">Privacy</h1>
     </main>
   `,

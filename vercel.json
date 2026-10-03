@@ -1,0 +1,59 @@
+{
+  "redirects": [
+    {
+      "source": "/default.asp",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/index.asp",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/:file(.*descrizione.*\\.asp)",
+      "destination": "/#storia",
+      "statusCode": 301
+    },
+    {
+      "source": "/:file(.*camere.*\\.asp)",
+      "destination": "/#camere",
+      "statusCode": 301
+    },
+    {
+      "source": "/:file(.*raggiungerci.*\\.asp)",
+      "destination": "/#contatti",
+      "statusCode": 301
+    },
+    {
+      "source": "/:file(foto.*\\.asp)",
+      "destination": "/#capre",
+      "statusCode": 301
+    },
+    {
+      "source": "/contatti.asp",
+      "destination": "/#contatti",
+      "statusCode": 301
+    },
+    {
+      "source": "/immagini/:path*",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/foto_camere/:path*",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/foto_mappe/:path*",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/:file(.*\\.asp)",
+      "destination": "/",
+      "statusCode": 301
+    }
+  ]
+}

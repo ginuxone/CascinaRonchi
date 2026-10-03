@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
-export type IconName = 'goat' | 'hoofprint' | 'wheat' | 'plate' | 'bed';
+export type IconName = 'goat' | 'hoofprint' | 'wheat' | 'plate' | 'bed' | 'whatsapp' | 'menu' | 'close';
 
 /** Decorative by default. Pass `label` when the icon carries meaning on its own. */
 @Component({

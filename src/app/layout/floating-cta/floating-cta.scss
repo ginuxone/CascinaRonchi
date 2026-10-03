@@ -1,0 +1,90 @@
+@use '../../../styles/mixins' as *;
+
+// Mobile: a bottom bar. The page gets matching bottom padding (see styles.scss) so nothing hides behind it.
+.cta {
+  position: fixed;
+  inset: auto 0 0;
+  z-index: 40;
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--gutter) calc(var(--space-3) + env(safe-area-inset-bottom));
+  background: var(--color-bg);
+  box-shadow: 0 -4px 16px rgb(36 54 26 / 12%);
+  visibility: hidden;
+  transform: translateY(100%);
+  transition:
+    transform 0.35s var(--ease-out),
+    visibility 0s 0.35s;
+
+  &.is-visible {
+    visibility: visible;
+    transform: none;
+    transition-delay: 0s;
+  }
+}
+
+a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 2.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-pill);
+}
+
+.cta__book {
+  flex: 1;
+  padding-inline: var(--space-5);
+  color: var(--color-on-primary);
+  background: var(--color-primary);
+
+  &:hover {
+    color: var(--color-on-primary);
+    background: var(--color-primary-hover);
+  }
+}
+
+.cta__whatsapp {
+  flex: none;
+  width: 2.75rem;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+
+  &:hover {
+    color: var(--color-primary-hover);
+    border-color: var(--color-primary-hover);
+  }
+}
+
+.cta__long {
+  display: none;
+}
+
+// Desktop: only the pill, bottom right.
+@include up(md) {
+  .cta {
+    inset: auto var(--space-5) var(--space-5) auto;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+  }
+
+  .cta__book {
+    flex: none;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .cta__whatsapp {
+    display: none;
+  }
+
+  .cta__long {
+    display: inline;
+  }
+
+  .cta__short {
+    display: none;
+  }
+}
