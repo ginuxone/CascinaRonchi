@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { GoatDivider } from '../../shared/goat-divider/goat-divider';
 import { Icon, IconName } from '../../shared/icon/icon';
+import { ResponsiveImage } from '../../shared/responsive-image/responsive-image';
 import { RevealDirective } from '../../shared/reveal.directive';
 
 interface Swatch {
@@ -12,7 +13,7 @@ interface Swatch {
 /** Dev-only (see app.routes.ts). Not translated and not shipped to production. */
 @Component({
   selector: 'app-style-guide-page',
-  imports: [GoatDivider, Icon, RevealDirective],
+  imports: [GoatDivider, Icon, ResponsiveImage, RevealDirective],
   changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrl: './style-guide.page.scss',
   template: `
@@ -67,6 +68,14 @@ interface Swatch {
       </ul>
       <div class="radii">
         <span class="r-sm">sm</span><span class="r-md">md</span><span class="r-lg">lg</span>
+      </div>
+
+      <h2>Images</h2>
+      <app-img slug="cascina-prato-estate" sizes="(min-width: 75rem) 1100px, 100vw" [priority]="true" ratio="21 / 9" />
+      <div class="gallery">
+        <app-img slug="capre-al-pascolo" sizes="(min-width: 48rem) 33vw, 100vw" ratio="4 / 3" />
+        <app-img slug="sala-ristorante-camino" sizes="(min-width: 48rem) 33vw, 100vw" ratio="4 / 3" />
+        <app-img slug="camera-pietra-letto-ferro" sizes="(min-width: 48rem) 33vw, 100vw" ratio="4 / 3" />
       </div>
 
       <h2>Reveal</h2>

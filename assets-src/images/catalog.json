@@ -1,0 +1,369 @@
+[
+  {
+    "slug": "tramonto-colline",
+    "source": "tramonto-colline.jpg",
+    "category": "landscape",
+    "focal": {
+      "x": 0.5,
+      "y": 0.6
+    },
+    "alt": "Cielo rosa e azzurro al tramonto sopra le colline e la pianura."
+  },
+  {
+    "slug": "ingresso-cascina-magnolia",
+    "source": "ingresso-cascina-magnolia.jpg",
+    "category": "landscape",
+    "focal": {
+      "x": 0.45,
+      "y": 0.4
+    },
+    "people": true,
+    "alt": "Ingresso della cascina in pietra, con i fiori di magnolia in primo piano."
+  },
+  {
+    "slug": "cascina-prato-estate",
+    "source": "cascina-prato-estate.jpg",
+    "category": "hero",
+    "focal": {
+      "x": 0.65,
+      "y": 0.55
+    },
+    "alt": "La cascina in pietra su un prato verde, sotto un cielo azzurro."
+  },
+  {
+    "slug": "sala-ristorante-tavolata",
+    "source": "sala-ristorante-tavolata.jpg",
+    "category": "restaurant",
+    "focal": {
+      "x": 0.5,
+      "y": 0.55
+    },
+    "alt": "Sala del ristorante con una lunga tavola apparecchiata e tovaglie a quadretti rossi."
+  },
+  {
+    "slug": "sala-ristorante-camino",
+    "source": "sala-ristorante-camino.jpg",
+    "category": "restaurant",
+    "focal": {
+      "x": 0.4,
+      "y": 0.55
+    },
+    "alt": "Sala del ristorante con il camino, le travi di legno e i tavoli apparecchiati."
+  },
+  {
+    "slug": "sala-ristorante-travi",
+    "source": "sala-ristorante-travi.jpg",
+    "category": "restaurant",
+    "focal": {
+      "x": 0.5,
+      "y": 0.6
+    },
+    "alt": "Tavolo apparecchiato davanti al camino, sotto le travi di legno."
+  },
+  {
+    "slug": "tavola-margherite",
+    "source": "tavola-margherite.jpg",
+    "category": "restaurant",
+    "focal": {
+      "x": 0.5,
+      "y": 0.45
+    },
+    "alt": "Tavola apparecchiata vista dall'alto, con un centrotavola di margherite."
+  },
+  {
+    "slug": "sala-ristorante-tavoli",
+    "source": "sala-ristorante-tavoli.jpg",
+    "category": "restaurant",
+    "focal": {
+      "x": 0.5,
+      "y": 0.55
+    },
+    "alt": "Tavoli apparecchiati nella sala del ristorante, con le pareti color terracotta."
+  },
+  {
+    "slug": "sala-ristorante-fiori",
+    "source": "sala-ristorante-fiori.jpg",
+    "category": "restaurant",
+    "focal": {
+      "x": 0.5,
+      "y": 0.6
+    },
+    "alt": "Tavoli apparecchiati nella sala, con un vaso di fiori in primo piano."
+  },
+  {
+    "slug": "sala-ristorante-angolo",
+    "source": "sala-ristorante-angolo.jpg",
+    "category": "restaurant",
+    "focal": {
+      "x": 0.5,
+      "y": 0.55
+    },
+    "alt": "Angolo della sala con una finestra, tavoli a quadretti e decorazioni."
+  },
+  {
+    "slug": "tavolata-pergolato-fronte",
+    "source": "tavolata-pergolato-fronte.jpg",
+    "category": "restaurant",
+    "focal": {
+      "x": 0.5,
+      "y": 0.6
+    },
+    "alt": "Lunga tavola apparecchiata sotto il pergolato, con un calice in primo piano."
+  },
+  {
+    "slug": "tavolata-pergolato",
+    "source": "tavolata-pergolato.jpg",
+    "category": "restaurant",
+    "focal": {
+      "x": 0.55,
+      "y": 0.55
+    },
+    "alt": "Lunga tavola apparecchiata all'aperto, sotto il pergolato e davanti al muro di pietra."
+  },
+  {
+    "slug": "tavolo-finestra-gialla",
+    "source": "tavolo-finestra-gialla.jpg",
+    "category": "restaurant",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "alt": "Tavolo all'aperto davanti a una finestra gialla, con gerani rossi e un muro di pietra."
+  },
+  {
+    "slug": "cuscino-cuore-camera",
+    "source": "cuscino-cuore-camera.jpg",
+    "category": "rooms",
+    "focal": {
+      "x": 0.6,
+      "y": 0.6
+    },
+    "alt": "Cuscino ricamato con un cuore rosso sul letto, davanti a un muro di pietra."
+  },
+  {
+    "slug": "camera-scala-ferro",
+    "source": "camera-scala-ferro.jpg",
+    "category": "rooms",
+    "focal": {
+      "x": 0.5,
+      "y": 0.55
+    },
+    "alt": "Camera con letto matrimoniale, soffitto di legno e una scala di ferro."
+  },
+  {
+    "slug": "camera-pietra-letto-ferro",
+    "source": "camera-pietra-letto-ferro.jpg",
+    "category": "rooms",
+    "focal": {
+      "x": 0.45,
+      "y": 0.6
+    },
+    "alt": "Camera con muro di pietra, letto in ferro battuto e lampada accesa."
+  },
+  {
+    "slug": "camera-letto-ferro-verticale",
+    "source": "camera-letto-ferro-verticale.jpg",
+    "category": "rooms",
+    "focal": {
+      "x": 0.5,
+      "y": 0.65
+    },
+    "alt": "Camera con letto in ferro battuto, muro di pietra e pavimento in cotto."
+  },
+  {
+    "slug": "camera-pietra-lampada",
+    "source": "camera-pietra-lampada.jpg",
+    "category": "rooms",
+    "focal": {
+      "x": 0.4,
+      "y": 0.65
+    },
+    "alt": "Camera con muro di pietra, letto in ferro battuto e lampada sul comodino."
+  },
+  {
+    "slug": "camera-copriletto-fiori",
+    "source": "camera-copriletto-fiori.jpg",
+    "category": "rooms",
+    "focal": {
+      "x": 0.4,
+      "y": 0.6
+    },
+    "alt": "Camera con copriletto a fiori, muro di pietra e finestra con vetri colorati."
+  },
+  {
+    "slug": "camera-copriletto-fiori-scala",
+    "source": "camera-copriletto-fiori-scala.jpg",
+    "category": "rooms",
+    "focal": {
+      "x": 0.5,
+      "y": 0.6
+    },
+    "alt": "Camera con copriletto a fiori, comò antico e scala a chiocciola."
+  },
+  {
+    "slug": "arpista-nel-bosco",
+    "source": "arpista-nel-bosco.jpg",
+    "category": "events",
+    "focal": {
+      "x": 0.55,
+      "y": 0.55
+    },
+    "people": true,
+    "alt": "Una musicista suona l'arpa nel bosco, accanto a un vaso di fiori."
+  },
+  {
+    "slug": "cena-nel-bosco",
+    "source": "cena-nel-bosco.jpg",
+    "category": "events",
+    "focal": {
+      "x": 0.55,
+      "y": 0.65
+    },
+    "people": true,
+    "alt": "Gruppo di persone a cena all'aperto, tra gli alberi del bosco."
+  },
+  {
+    "slug": "tavoli-giardino-rosa",
+    "source": "tavoli-giardino-rosa.jpg",
+    "category": "events",
+    "focal": {
+      "x": 0.4,
+      "y": 0.55
+    },
+    "alt": "Tavoli apparecchiati all'aperto con tovaglie rosa, tra gli alberi."
+  },
+  {
+    "slug": "cena-a-lume-di-candela",
+    "source": "cena-a-lume-di-candela.jpg",
+    "category": "events",
+    "focal": {
+      "x": 0.6,
+      "y": 0.6
+    },
+    "people": true,
+    "alt": "Tavoli a lume di candela all'aperto, di sera, con la pianura illuminata sullo sfondo."
+  },
+  {
+    "slug": "cena-giardino-sera",
+    "source": "cena-giardino-sera.jpg",
+    "category": "events",
+    "focal": {
+      "x": 0.5,
+      "y": 0.6
+    },
+    "people": true,
+    "alt": "Cena all'aperto di sera, con gli ospiti seduti ai lunghi tavoli sotto gli alberi."
+  },
+  {
+    "slug": "cena-luci-sera",
+    "source": "cena-luci-sera.jpg",
+    "category": "events",
+    "focal": {
+      "x": 0.5,
+      "y": 0.7
+    },
+    "people": true,
+    "alt": "Cena all'aperto di sera, sotto una fila di lucine appese tra gli alberi."
+  },
+  {
+    "slug": "cascina-illuminata-sera",
+    "source": "cascina-illuminata-sera.jpg",
+    "category": "events",
+    "focal": {
+      "x": 0.5,
+      "y": 0.55
+    },
+    "people": true,
+    "alt": "La cascina illuminata di sera, con gli ospiti sotto il portico."
+  },
+  {
+    "slug": "cascina-magnolia",
+    "source": "cascina-magnolia.jpg",
+    "category": "landscape",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "alt": "La cascina in pietra vista dall'ingresso, con un albero di magnolia in fiore."
+  },
+  {
+    "slug": "cascina-facciata-pietra",
+    "source": "cascina-facciata-pietra.jpg",
+    "category": "landscape",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "alt": "La facciata in pietra della cascina, con il balcone di legno e il cielo azzurro."
+  },
+  {
+    "slug": "cascina-portico-estate",
+    "source": "cascina-portico-estate.jpg",
+    "category": "landscape",
+    "focal": {
+      "x": 0.5,
+      "y": 0.55
+    },
+    "alt": "Il lato della cascina con il portico, il pergolato e il prato in estate."
+  },
+  {
+    "slug": "capre-al-pascolo",
+    "source": "capre-al-pascolo.jpg",
+    "category": "goats",
+    "focal": {
+      "x": 0.5,
+      "y": 0.7
+    },
+    "alt": "Un gruppo di capre bianche al pascolo su un prato verde."
+  },
+  {
+    "slug": "cancello-glicine",
+    "source": "cancello-glicine.jpg",
+    "category": "landscape",
+    "focal": {
+      "x": 0.45,
+      "y": 0.6
+    },
+    "alt": "Il cancello della cascina con il glicine in fiore."
+  },
+  {
+    "slug": "cascina-dal-prato",
+    "source": "cascina-dal-prato.jpg",
+    "category": "landscape",
+    "focal": {
+      "x": 0.5,
+      "y": 0.55
+    },
+    "alt": "La cascina vista dal prato, tra alberi e fiori."
+  },
+  {
+    "slug": "cortile-gerani",
+    "source": "cortile-gerani.jpg",
+    "category": "landscape",
+    "focal": {
+      "x": 0.35,
+      "y": 0.5
+    },
+    "alt": "Il cortile in pietra con la facciata della cascina e vasi di gerani."
+  },
+  {
+    "slug": "capre-sotto-la-cascina",
+    "source": "capre-sotto-la-cascina.jpg",
+    "category": "goats",
+    "focal": {
+      "x": 0.5,
+      "y": 0.75
+    },
+    "alt": "Capre bianche e marroni al pascolo sul prato sotto la cascina."
+  },
+  {
+    "slug": "capretto-nel-fieno",
+    "source": "capretto-nel-fieno.jpg",
+    "category": "goats",
+    "focal": {
+      "x": 0.4,
+      "y": 0.65
+    },
+    "alt": "Un capretto bianco e nero riposa nel fieno, vicino a un tronco."
+  }
+]
