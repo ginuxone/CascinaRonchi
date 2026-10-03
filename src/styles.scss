@@ -90,6 +90,30 @@ a {
   }
 }
 
+// Placeholder block shown until content (e.g. a staff card image) has loaded
+.skeleton {
+  background: linear-gradient(
+      90deg,
+      transparent,
+      rgb(255 255 255 / 55%),
+      transparent
+    )
+    var(--color-surface-alt);
+  background-size: 200% 100%;
+  border-radius: var(--radius-md);
+  animation: skeleton-shimmer 1.4s linear infinite;
+}
+
+@keyframes skeleton-shimmer {
+  from {
+    background-position: 200% 0;
+  }
+
+  to {
+    background-position: -200% 0;
+  }
+}
+
 @include reduced-motion {
   html {
     scroll-behavior: auto;
@@ -106,5 +130,9 @@ a {
   .reveal {
     opacity: 1;
     transform: none;
+  }
+
+  .skeleton {
+    animation: none;
   }
 }

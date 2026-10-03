@@ -78,6 +78,9 @@ interface Swatch {
         <app-img slug="camera-pietra-letto-ferro" sizes="(min-width: 48rem) 33vw, 100vw" ratio="4 / 3" />
       </div>
 
+      <h2>Skeleton</h2>
+      <div class="skeleton skeleton-demo" aria-hidden="true"></div>
+
       <h2>Reveal</h2>
       <p appReveal>This paragraph fades in on scroll (disabled with reduced motion).</p>
       <button type="button" class="focus-demo">Tab here to see the focus ring</button>
