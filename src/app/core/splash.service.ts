@@ -1,15 +1,17 @@
 import { DOCUMENT } from '@angular/common';
 import { ApplicationRef, inject, Injectable } from '@angular/core';
 
-/** Upper bound on how long the splash may stay after bootstrap (keeps LCP in check, plan Step 4). */
+/** Upper bound on how long the splash may stay, counted from navigation start (keeps LCP in check, plan Step 4). */
 const MAX_WAIT_MS = 2000;
+/** Shortest remaining wait, so a late bootstrap still gets a moment to paint before the fade. */
+const MIN_WAIT_MS = 300;
 /** Fade-out length in index.html (0.4 s) plus a little slack before the node is removed. */
 const FADE_OUT_MS = 500;
 
 /**
  * Dismisses the inline `#splash` from index.html once hydration is done and the hero image is decoded,
- * or after MAX_WAIT_MS, whichever comes first. Browser only: call it from `afterNextRender()`.
- * If this never runs, a CSS animation in index.html hides the splash by itself.
+ * or MAX_WAIT_MS after navigation start, whichever comes first. Browser only: call it from `afterNextRender()`.
+ * If this never runs, a CSS animation and a timeout in index.html hide the splash and lift `inert` by themselves.
  */
 @Injectable({ providedIn: 'root' })
 export class SplashService {
@@ -24,12 +26,13 @@ export class SplashService {
 
     let cap: ReturnType<typeof setTimeout> | undefined;
     const capped = new Promise<void>((resolve) => {
-      cap = setTimeout(resolve, MAX_WAIT_MS);
+      cap = setTimeout(resolve, Math.max(MIN_WAIT_MS, MAX_WAIT_MS - performance.now()));
     });
     const ready = this.appRef.whenStable().then(() => this.heroDecoded());
 
     void Promise.race([ready, capped]).then(() => {
       clearTimeout(cap);
+      this.document.querySelector('app-root')?.removeAttribute('inert');
       splash.classList.add('is-leaving');
       setTimeout(() => splash.remove(), FADE_OUT_MS);
     });
