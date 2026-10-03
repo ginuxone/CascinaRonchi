@@ -1,4 +1,4 @@
-import { afterNextRender, Directive, ElementRef, inject, OnDestroy } from '@angular/core';
+import { afterNextRender, DestroyRef, Directive, ElementRef, inject } from '@angular/core';
 
 /**
  * Fades and slides the element in when it scrolls into view.
@@ -6,11 +6,12 @@ import { afterNextRender, Directive, ElementRef, inject, OnDestroy } from '@angu
  * applied in the browser, and never to elements already on screen.
  */
 @Directive({ selector: '[appReveal]' })
-export class RevealDirective implements OnDestroy {
+export class RevealDirective {
   private readonly el: HTMLElement = inject(ElementRef).nativeElement;
   private observer?: IntersectionObserver;
 
   constructor() {
+    inject(DestroyRef).onDestroy(() => this.observer?.disconnect());
     afterNextRender(() => {
       const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       const onScreen = this.el.getBoundingClientRect().top < window.innerHeight;
@@ -30,9 +31,5 @@ export class RevealDirective implements OnDestroy {
       );
       this.observer.observe(this.el);
     });
-  }
-
-  ngOnDestroy(): void {
-    this.observer?.disconnect();
   }
 }
