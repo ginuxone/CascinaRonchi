@@ -1,0 +1,92 @@
+ul {
+  list-style: none;
+  margin: 0 0 var(--space-6);
+  padding: 0;
+}
+
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  gap: var(--space-4);
+}
+
+.chip {
+  display: block;
+  height: 3rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.contrast li {
+  display: inline-block;
+  margin: 0 var(--space-3) var(--space-3) 0;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+}
+
+.c1 { color: var(--color-text); background: var(--color-bg); border: 1px solid var(--color-border); }
+.c2 { color: var(--color-text-muted); background: var(--color-bg); border: 1px solid var(--color-border); }
+.c3 { color: var(--color-primary); background: var(--color-bg); border: 1px solid var(--color-border); }
+.c4 { color: var(--color-on-primary); background: var(--color-primary); }
+.c5 { color: var(--color-accent); background: var(--color-bg); border: 1px solid var(--color-border); }
+.c6 { color: var(--color-accent); background: var(--c-terracotta-100); }
+
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-5);
+  color: var(--color-primary);
+
+  li {
+    --icon-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+  }
+}
+
+.spacing li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.bar {
+  height: 0.75rem;
+  background: var(--color-primary);
+}
+
+.radii {
+  display: flex;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+
+  span {
+    display: grid;
+    place-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--color-surface);
+    border: 2px solid var(--color-primary);
+    box-shadow: var(--shadow-md);
+  }
+}
+
+.r-sm { border-radius: var(--radius-sm); }
+.r-md { border-radius: var(--radius-md); }
+.r-lg { border-radius: var(--radius-lg); }
+
+.focus-demo {
+  margin-top: var(--space-5);
+  padding: var(--space-3) var(--space-5);
+  font: inherit;
+  color: var(--color-on-primary);
+  background: var(--color-primary);
+  border: 0;
+  border-radius: var(--radius-pill);
+}
