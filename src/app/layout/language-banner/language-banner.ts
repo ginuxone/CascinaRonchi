@@ -55,7 +55,10 @@ export class LanguageBanner {
   constructor() {
     const current = inject(CURRENT_LOCALE);
     afterNextRender(() => {
-      const preferred = SITE_LOCALES.find((l) => l === navigator.language.slice(0, 2).toLowerCase());
+      const preferred = navigator.languages
+        .map((tag) => tag.slice(0, 2).toLowerCase())
+        .map((code) => SITE_LOCALES.find((l) => l === code))
+        .find((l) => l !== undefined);
       if (preferred && preferred !== current && !this.wasHandled()) {
         this.offer.set({ ...OFFERS[preferred], locale: preferred });
       }

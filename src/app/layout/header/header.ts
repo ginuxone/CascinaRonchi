@@ -1,8 +1,10 @@
+import { DOCUMENT } from '@angular/common';
 import {
   afterNextRender,
   ChangeDetectionStrategy,
   Component,
   DestroyRef,
+  effect,
   ElementRef,
   inject,
   Injector,
@@ -74,9 +76,15 @@ export class Header {
 
   private readonly host: HTMLElement = inject(ElementRef).nativeElement;
   private readonly injector = inject(Injector);
+  private readonly document = inject(DOCUMENT);
 
   constructor() {
     const destroyRef = inject(DestroyRef);
+    // While the menu covers the page, the content behind it is out of reach for keyboard and screen readers.
+    effect(() => {
+      const open = this.menuOpen();
+      this.document.querySelectorAll('main, app-footer, app-floating-cta').forEach((el) => el.toggleAttribute('inert', open));
+    });
     afterNextRender(() => {
       const onScroll = () => this.scrolled.set(window.scrollY > 24);
       onScroll();

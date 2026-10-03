@@ -22,7 +22,7 @@ import { SITE_LOCALES } from '../../core/site.config';
               [attr.hreflang]="l"
               [attr.lang]="l"
               [attr.aria-current]="l === current ? 'true' : null"
-              [attr.aria-label]="names[l]"
+              [attr.aria-label]="l.toUpperCase() + ' – ' + names[l]"
               [title]="names[l]"
               >{{ l.toUpperCase() }}</a
             >
