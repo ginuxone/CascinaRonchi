@@ -45,11 +45,8 @@ type Format = 'avif' | 'webp' | 'jpg';
 
     img {
       height: 100%;
-      transition: opacity var(--duration-reveal) var(--ease-out);
-    }
-
-    img.is-cropped {
       object-fit: cover;
+      transition: opacity var(--duration-reveal) var(--ease-out);
     }
 
     img.is-pending {
@@ -71,7 +68,6 @@ type Format = 'avif' | 'webp' | 'jpg';
         [attr.loading]="priority() ? 'eager' : 'lazy'"
         [attr.fetchpriority]="priority() ? 'high' : null"
         decoding="async"
-        [class.is-cropped]="!!ratio()"
         [class.is-pending]="pending()"
         [style.object-position]="objectPosition()"
         (load)="pending.set(false)"
@@ -116,7 +112,8 @@ export class ResponsiveImage implements OnInit {
 
   constructor() {
     afterNextRender(() => {
-      if (!this.img().nativeElement.complete) {
+      // Never hide the LCP image: Chrome ignores opacity:0 elements as LCP candidates.
+      if (!this.priority() && !this.img().nativeElement.complete) {
         this.pending.set(true);
       }
     });
