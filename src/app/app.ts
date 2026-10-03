@@ -1,6 +1,7 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { afterNextRender, ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
+import { SplashService } from './core/splash.service';
 import { IconSprite } from './shared/icon/icon-sprite';
 
 @Component({
@@ -12,4 +13,9 @@ import { IconSprite } from './shared/icon/icon-sprite';
     <router-outlet />
   `,
 })
-export class App {}
+export class App {
+  constructor() {
+    const splash = inject(SplashService);
+    afterNextRender(() => splash.dismissWhenReady());
+  }
+}
