@@ -30,7 +30,13 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.scss"],
+            "styles": [
+              "@fontsource/fraunces/latin-600.css",
+              "@fontsource/inter/latin-400.css",
+              "@fontsource/inter/latin-500.css",
+              "@fontsource/inter/latin-600.css",
+              "src/styles.scss"
+            ],
             "polyfills": ["@angular/localize/init"],
             "server": "src/main.server.ts",
             "outputMode": "static",
@@ -38,6 +44,12 @@
           },
           "configurations": {
             "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/app/dev.routes.ts",
+                  "with": "src/app/dev.routes.prod.ts"
+                }
+              ],
               "budgets": [
                 {
                   "type": "initial",

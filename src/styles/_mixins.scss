@@ -1,0 +1,21 @@
+@use 'sass:map';
+
+// Breakpoints (mobile first). Keep in sync with the style guide.
+$breakpoints: (
+  sm: 36rem,
+  md: 48rem,
+  lg: 64rem,
+  xl: 80rem,
+);
+
+@mixin up($name) {
+  @media (min-width: map.get($breakpoints, $name)) {
+    @content;
+  }
+}
+
+@mixin reduced-motion {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}

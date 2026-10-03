@@ -1,10 +1,15 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
+import { IconSprite } from './shared/icon/icon-sprite';
+
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, IconSprite],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  template: '<router-outlet />',
+  template: `
+    <app-icon-sprite />
+    <router-outlet />
+  `,
 })
 export class App {}

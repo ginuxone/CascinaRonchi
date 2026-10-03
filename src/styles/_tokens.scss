@@ -1,0 +1,80 @@
+// Design tokens as CSS custom properties. Breakpoints live in _mixins.scss
+// because custom properties cannot be used inside media queries.
+:root {
+  // Palette: meadow green, hay/cream, terracotta, slate
+  --c-meadow-100: #e6eedd;
+  --c-meadow-500: #5f8247;
+  --c-meadow-600: #4f6f3a;
+  --c-meadow-700: #3f5d2c;
+  --c-meadow-900: #24361a;
+
+  --c-cream-50: #fbf7ee;
+  --c-cream-100: #f4ecd9;
+  --c-cream-200: #e8dcbf;
+
+  --c-terracotta-100: #f6e3da;
+  --c-terracotta-600: #b4532f;
+  --c-terracotta-700: #98431f;
+
+  --c-slate-900: #23292b;
+  --c-slate-700: #3d4649;
+  --c-slate-600: #4f5a5e;
+
+  // Semantic roles
+  --color-bg: var(--c-cream-50);
+  --color-surface: #fff;
+  --color-surface-alt: var(--c-cream-100);
+  --color-text: var(--c-slate-900);
+  --color-text-muted: var(--c-slate-600);
+  --color-heading: var(--c-meadow-900);
+  --color-primary: var(--c-meadow-700);
+  --color-primary-hover: var(--c-meadow-900);
+  --color-on-primary: #fff;
+  --color-accent: var(--c-terracotta-700);
+  --color-border: var(--c-cream-200);
+  --color-focus: var(--c-terracotta-700);
+
+  // Typography
+  --font-heading: 'Fraunces', 'Fraunces Fallback', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter', 'Inter Fallback', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --text-sm: 0.875rem;
+  --text-base: 1.0625rem;
+  --text-lg: clamp(1.1875rem, 1.1rem + 0.4vw, 1.375rem);
+  --text-xl: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+  --text-2xl: clamp(1.875rem, 1.5rem + 1.9vw, 2.875rem);
+  --text-3xl: clamp(2.25rem, 1.6rem + 3.2vw, 4rem);
+
+  --leading-tight: 1.15;
+  --leading-body: 1.65;
+
+  // Spacing scale
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 7rem;
+
+  --section-space: clamp(var(--space-8), 8vw, var(--space-9));
+  --gutter: clamp(1rem, 4vw, 2rem);
+  --container-max: 72rem;
+  --container-narrow: 42rem;
+
+  // Radii and shadows
+  --radius-sm: 0.375rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.5rem;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 1px 2px rgb(36 54 26 / 10%);
+  --shadow-md: 0 6px 18px rgb(36 54 26 / 14%);
+  --shadow-lg: 0 16px 40px rgb(36 54 26 / 18%);
+
+  // Motion
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --duration-reveal: 700ms;
+}

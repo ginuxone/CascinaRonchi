@@ -408,6 +408,8 @@ CascinaRonchi/
 ---
 
 ## 7. Backlog / later
+- Preload the critical woff2 fonts (Fraunces 600, Inter 400). Filenames are hashed by the build, so this needs a post-build step or self-managed `@font-face`. Do it with the splash in Step 4 or in Step 10. (Step 2 review, Major, deferred.)
+- Drop unused `.woff` fallback files from `dist/media` (Step 2 review, Minor).
 - Automated tests (unit with Vitest, e2e with Playwright, visual regression), postponed per R10.
 - Photo gallery/lightbox section ("La vita in cascina").
 - Seasonal events / news (e.g. kidding season 🐐, open farm days), which could justify a lightweight headless CMS later.

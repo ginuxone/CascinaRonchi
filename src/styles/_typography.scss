@@ -1,0 +1,66 @@
+// Fonts are self-hosted (ADR-07) and loaded from angular.json `styles`.
+
+// Metric-adjusted fallbacks so the swap to the web fonts causes minimal layout shift.
+// Fraunces values are approximate; re-measure in Step 9 if CLS needs it.
+@font-face {
+  font-family: 'Inter Fallback';
+  src: local('Arial');
+  size-adjust: 107.4%;
+  ascent-override: 90.2%;
+  descent-override: 22.5%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: 'Fraunces Fallback';
+  src: local('Georgia');
+  size-adjust: 103%;
+  ascent-override: 93%;
+  descent-override: 24%;
+  line-gap-override: 0%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+  color: var(--color-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+.h1 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: var(--leading-tight);
+  color: var(--color-heading);
+  text-wrap: balance;
+}
+
+h1,
+.h1 {
+  font-size: var(--text-3xl);
+}
+
+h2 {
+  font-size: var(--text-2xl);
+}
+
+h3 {
+  font-size: var(--text-xl);
+}
+
+h4 {
+  font-size: var(--text-lg);
+}
+
+p {
+  text-wrap: pretty;
+}
+
+.lead {
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+}
