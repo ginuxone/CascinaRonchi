@@ -1,0 +1,31 @@
+ul {
+  display: flex;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  padding-inline: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--color-text);
+  text-decoration: none;
+  border-radius: var(--radius-pill);
+
+  &:hover {
+    background: var(--color-surface-alt);
+  }
+
+  &[aria-current='true'] {
+    color: var(--color-on-primary);
+    background: var(--color-primary);
+  }
+}

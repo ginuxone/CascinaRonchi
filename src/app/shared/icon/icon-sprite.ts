@@ -47,6 +47,25 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
             <rect x="9" y="22" width="9" height="6" rx="3" />
           </g>
         </symbol>
+        <symbol id="icon-whatsapp" viewBox="0 0 48 48">
+          <path
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linejoin="round"
+            d="M24 5a19 19 0 0 0-16.2 28.9L5 43l9.4-2.7A19 19 0 1 0 24 5Z"
+          />
+          <path
+            fill="currentColor"
+            d="M17.5 15.5c-1 1-1.5 2.6-.6 4.7 1.7 3.8 4.9 7 8.9 8.6 1.8.7 3.2.2 4.2-.9l.8-1.2-3.6-2.4-1.5 1.1c-1.6-.7-3.6-2.7-4.4-4.4l1.1-1.5-2.3-3.5Z"
+          />
+        </symbol>
+        <symbol id="icon-menu" viewBox="0 0 48 48">
+          <path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M8 14h32M8 24h32M8 34h32" />
+        </symbol>
+        <symbol id="icon-close" viewBox="0 0 48 48">
+          <path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M12 12l24 24M36 12 12 36" />
+        </symbol>
       </defs>
     </svg>
   `,
