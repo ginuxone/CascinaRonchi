@@ -28,8 +28,8 @@ const { ratings } = SITE_CONFIG;
           }
         </ul>
         <p class="strip__date">
-          <ng-container i18n="@@trust.asOf">Valutazioni aggiornate a</ng-container>
-          <time [attr.datetime]="asOf">{{ asOfLabel }}</time>
+          <ng-container i18n="@@trust.asOf">Valutazioni aggiornate a</ng-container
+          >&ngsp;<time [attr.datetime]="asOf">{{ asOfLabel }}</time>
         </p>
       </div>
     </div>
