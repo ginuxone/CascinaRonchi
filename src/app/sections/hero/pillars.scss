@@ -1,0 +1,58 @@
+@use '../../../styles/mixins' as *;
+
+ul {
+  display: grid;
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include up(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include up(lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+a {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  height: 100%;
+  padding: var(--space-5);
+  color: var(--color-text);
+  text-decoration: none;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition:
+    box-shadow 0.25s var(--ease-out),
+    transform 0.25s var(--ease-out);
+
+  &:hover {
+    color: var(--color-text);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+}
+
+app-icon {
+  --icon-size: 2.5rem;
+  color: var(--color-accent);
+}
+
+h2 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  line-height: var(--leading-tight);
+  color: var(--color-heading);
+}
+
+p {
+  margin: 0;
+  color: var(--color-text-muted);
+}

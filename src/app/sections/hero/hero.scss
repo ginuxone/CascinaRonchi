@@ -1,0 +1,77 @@
+@use '../../../styles/mixins' as *;
+
+:host {
+  display: block;
+}
+
+.hero__banner {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: min(34rem, 80svh);
+  color: #fff;
+  background: var(--c-meadow-900);
+
+  @include up(md) {
+    min-height: min(40rem, calc(100svh - 4rem));
+  }
+}
+
+.hero__image {
+  position: absolute;
+  inset: 0;
+}
+
+// Dark scrim so the white text passes AA contrast on any part of the photo.
+.hero__banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgb(36 54 26 / 88%) 0%, rgb(36 54 26 / 55%) 55%, rgb(36 54 26 / 15%) 100%);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  padding-block: var(--space-7);
+}
+
+h1 {
+  max-width: 18ch;
+  margin: 0 0 var(--space-4);
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  line-height: var(--leading-tight);
+  color: inherit;
+  text-wrap: balance;
+}
+
+.hero__lead {
+  max-width: 38rem;
+  margin: 0 0 var(--space-5);
+  font-size: var(--text-lg);
+  line-height: var(--leading-body);
+}
+
+.hero__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding-inline: var(--space-6);
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  background: var(--color-accent);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-md);
+
+  &:hover {
+    color: #fff;
+    background: var(--c-terracotta-600);
+  }
+
+  &:focus-visible {
+    outline-color: #fff;
+  }
+}
