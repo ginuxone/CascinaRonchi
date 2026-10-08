@@ -1,0 +1,145 @@
+@use '../../../styles/mixins' as *;
+
+:host {
+  display: block;
+}
+
+h2 {
+  margin: 0 0 var(--space-5);
+}
+
+h3 {
+  margin: 0 0 var(--space-3);
+}
+
+p {
+  margin: 0 0 var(--space-3);
+}
+
+.notice {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+  margin-bottom: var(--space-7);
+  padding: var(--space-5);
+  background: var(--c-terracotta-100);
+  border-inline-start: 6px solid var(--color-accent);
+  border-radius: var(--radius-md);
+
+  app-icon {
+    --icon-size: 2.5rem;
+    flex: none;
+    color: var(--color-accent);
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.notice__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-heading);
+}
+
+.intro {
+  display: grid;
+  gap: var(--space-6);
+  margin-bottom: var(--space-7);
+
+  @include up(md) {
+    grid-template-columns: 3fr 2fr;
+    align-items: start;
+    gap: var(--space-8);
+  }
+}
+
+.hours {
+  padding: var(--space-5);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+
+  dl {
+    display: grid;
+    gap: var(--space-1) var(--space-4);
+    margin: 0;
+  }
+
+  dt {
+    margin-top: var(--space-3);
+    font-weight: 600;
+  }
+
+  dd {
+    margin: 0;
+    color: var(--color-text-muted);
+  }
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 3rem;
+  padding-inline: var(--space-5);
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-pill);
+
+  app-icon {
+    --icon-size: 1.4rem;
+  }
+}
+
+.button--primary {
+  color: var(--color-on-primary);
+  background: var(--color-primary);
+
+  &:hover {
+    color: var(--color-on-primary);
+    background: var(--color-primary-hover);
+    border-color: var(--color-primary-hover);
+  }
+}
+
+.button--outline {
+  color: var(--color-primary);
+
+  &:hover {
+    color: var(--color-primary-hover);
+    border-color: var(--color-primary-hover);
+  }
+}
+
+.strip {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include up(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include up(lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  app-img {
+    border-radius: var(--radius-md);
+  }
+}
