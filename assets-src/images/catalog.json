@@ -365,5 +365,226 @@
       "y": 0.65
     },
     "alt": "Un capretto bianco e nero riposa nel fieno, vicino a un tronco."
+  },
+  {
+    "slug": "salumeria-impasto-salsiccia",
+    "source": "salumeria-impasto-salsiccia.jpg",
+    "category": "staff",
+    "focal": {
+      "x": 0.5,
+      "y": 0.35
+    },
+    "alt": "Un uomo sorride davanti a un grande mucchio di carne macinata, con costine appese alle sue spalle."
+  },
+  {
+    "slug": "salumeria-macinatrice-carne",
+    "source": "salumeria-macinatrice-carne.jpg",
+    "category": "staff",
+    "focal": {
+      "x": 0.5,
+      "y": 0.3
+    },
+    "alt": "Un uomo in grembiule lavora con la macinatrice nel laboratorio dei salumi."
+  },
+  {
+    "slug": "capretti-intorno-allevatore",
+    "source": "capretti-intorno-allevatore.jpg",
+    "category": "goats",
+    "focal": {
+      "x": 0.6,
+      "y": 0.45
+    },
+    "alt": "Un uomo seduto sul prato circondato da capretti bianchi, uno dei quali gli sale sulla schiena."
+  },
+  {
+    "slug": "vigneti-sotto-la-neve",
+    "source": "vigneti-sotto-la-neve.jpg",
+    "category": "landscape",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "alt": "I filari di vigna e il bosco coperti di neve in una giornata d’inverno."
+  },
+  {
+    "slug": "cuoca-con-salumi-e-pane",
+    "source": "cuoca-con-salumi-e-pane.jpg",
+    "category": "staff",
+    "focal": {
+      "x": 0.5,
+      "y": 0.35
+    },
+    "alt": "Una donna sorridente in cucina porta un vassoio di salumi e un cesto di pane."
+  },
+  {
+    "slug": "uomo-capretto-bianco-nero-stalla",
+    "source": "uomo-capretto-bianco-nero-stalla.jpg",
+    "category": "goats",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "alt": "Un uomo con il berretto sorride tenendo in braccio un capretto bianco e nero nella stalla."
+  },
+  {
+    "slug": "uomo-capretto-bianco-biberon",
+    "source": "uomo-capretto-bianco-biberon.jpg",
+    "category": "goats",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "alt": "Un uomo sorridente abbraccia un capretto bianco, con un biberon in mano."
+  },
+  {
+    "slug": "uomo-pergolato-felpa-capre",
+    "source": "uomo-pergolato-felpa-capre.jpg",
+    "category": "staff",
+    "focal": {
+      "x": 0.5,
+      "y": 0.4
+    },
+    "alt": "Un uomo in piedi sotto il pergolato, con una felpa con il disegno di una capra."
+  },
+  {
+    "slug": "uomo-capretto-bianco-guanti-stalla",
+    "source": "uomo-capretto-bianco-guanti-stalla.jpg",
+    "category": "goats",
+    "focal": {
+      "x": 0.5,
+      "y": 0.4
+    },
+    "alt": "Un uomo con i guanti da lavoro tiene in braccio un capretto bianco nella stalla."
+  },
+  {
+    "slug": "uomo-potatura-rose-giardino",
+    "source": "uomo-potatura-rose-giardino.jpg",
+    "category": "staff",
+    "focal": {
+      "x": 0.6,
+      "y": 0.35
+    },
+    "alt": "Un uomo con il cappello cura una pianta di rose nel giardino, sul prato verde."
+  },
+  {
+    "slug": "donna-capretto-nero-stalla",
+    "source": "donna-capretto-nero-stalla.jpg",
+    "category": "goats",
+    "focal": {
+      "x": 0.45,
+      "y": 0.35
+    },
+    "alt": "Una donna sorridente tiene in braccio un capretto nero davanti a un muro di pietra."
+  },
+  {
+    "slug": "donna-torta-berretto-natale",
+    "source": "donna-torta-berretto-natale.jpg",
+    "category": "staff",
+    "focal": {
+      "x": 0.55,
+      "y": 0.35
+    },
+    "alt": "Una donna con il berretto rosso mostra una torta decorata all’ingresso della cascina, a Natale."
+  },
+  {
+    "slug": "capre-prato-cascina-primavera",
+    "source": "capre-prato-cascina-primavera.jpg",
+    "category": "goats",
+    "focal": {
+      "x": 0.5,
+      "y": 0.45
+    },
+    "alt": "Capre bianche al pascolo sul prato davanti alla cascina, in una giornata di primavera."
+  },
+  {
+    "slug": "capre-pascolo-prato-inverno",
+    "source": "capre-pascolo-prato-inverno.jpg",
+    "category": "goats",
+    "focal": {
+      "x": 0.5,
+      "y": 0.6
+    },
+    "alt": "Un gruppo di capre al pascolo sul prato, tra gli alberi spogli."
+  },
+  {
+    "slug": "coppia-abbraccia-capra-portico",
+    "source": "coppia-abbraccia-capra-portico.jpg",
+    "category": "staff",
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "alt": "Un uomo e una donna sorridono abbracciando una capra bianca davanti a una porta di legno."
+  },
+  {
+    "slug": "sala-natale-coppia-tavola",
+    "source": "sala-natale-coppia-tavola.jpg",
+    "category": "restaurant",
+    "focal": {
+      "x": 0.5,
+      "y": 0.55
+    },
+    "alt": "Due persone in piedi dietro una tavola apparecchiata per Natale, nella sala con il camino."
+  },
+  {
+    "slug": "donna-capretto-bianco-grembiule",
+    "source": "donna-capretto-bianco-grembiule.jpg",
+    "category": "goats",
+    "focal": {
+      "x": 0.5,
+      "y": 0.4
+    },
+    "alt": "Una donna sorridente con il grembiule tiene in braccio un capretto bianco."
+  },
+  {
+    "slug": "coppia-brindisi-ingresso",
+    "source": "coppia-brindisi-ingresso.jpg",
+    "category": "staff",
+    "focal": {
+      "x": 0.5,
+      "y": 0.4
+    },
+    "alt": "Un uomo e una donna brindano davanti all’ingresso in pietra della cascina."
+  },
+  {
+    "slug": "coppia-selfie-capre-recinto",
+    "source": "coppia-selfie-capre-recinto.jpg",
+    "category": "staff",
+    "focal": {
+      "x": 0.5,
+      "y": 0.4
+    },
+    "alt": "Un uomo e una donna si fanno un selfie davanti al recinto delle capre."
+  },
+  {
+    "slug": "uomo-grembiule-saluta-ingresso",
+    "source": "uomo-grembiule-saluta-ingresso.jpg",
+    "category": "staff",
+    "focal": {
+      "x": 0.5,
+      "y": 0.35
+    },
+    "alt": "Un uomo in grembiule saluta dalla porta di pietra della cascina, tra i fiori."
+  },
+  {
+    "slug": "capretti-giocano-con-allevatore",
+    "source": "capretti-giocano-con-allevatore.jpg",
+    "category": "goats",
+    "focal": {
+      "x": 0.45,
+      "y": 0.5
+    },
+    "alt": "Capretti bianchi giocano attorno a un uomo seduto a terra, mentre uno gli sale sulla schiena."
+  },
+  {
+    "slug": "uomo-trattore-recinto",
+    "source": "uomo-trattore-recinto.jpg",
+    "category": "staff",
+    "avifQuality": 42,
+    "focal": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "alt": "Un uomo sul trattore lavora lungo la recinzione del pascolo, sotto un grande abete."
   }
 ]

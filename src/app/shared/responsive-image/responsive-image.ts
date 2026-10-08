@@ -20,7 +20,8 @@ type Format = 'avif' | 'webp' | 'jpg';
  * JPEG sources, a blurred placeholder behind it and a fade-in once loaded.
  *
  * `priority` is for the LCP image only: eager loading, `fetchpriority="high"` and a `<link rel="preload">`.
- * `ratio` crops to a fixed aspect ratio (e.g. "16 / 9") around the catalog focal point.
+ * `ratio` crops to a fixed aspect ratio (e.g. "16 / 9") around the catalog focal point; "auto" lets the
+ * parent size the image (give the host a height) and it covers that box.
  * `decorative` renders an empty alt for images that repeat nearby text.
  *
  * URLs are absolute (`/img/…`): one shared copy at the site root, see scripts/prune-locale-assets.mjs.
@@ -41,6 +42,10 @@ type Format = 'avif' | 'webp' | 'jpg';
     img {
       display: block;
       width: 100%;
+    }
+
+    picture {
+      height: 100%;
     }
 
     img {

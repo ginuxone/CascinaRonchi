@@ -5,6 +5,7 @@
 //     -> src/app/content/images.generated.ts                 (typed manifest + i18n alts)
 //
 // Metadata (EXIF, GPS, ICC) is stripped: sharp drops it unless withMetadata() is called.
+// A catalog entry may set `avifQuality` (default 50) for a very detailed photo that busts the AVIF budget.
 // Idempotent: a source is only re-encoded when its bytes, its catalog entry or this script change.
 
 import { createHash } from 'node:crypto';
@@ -22,8 +23,9 @@ const manifestFile = join(root, 'src', 'app', 'content', 'images.generated.ts');
 const CATEGORIES = ['hero', 'goats', 'rooms', 'restaurant', 'history', 'staff', 'landscape', 'events'];
 const WIDTHS = [480, 800, 1200, 1600];
 const HERO_WIDTHS = [...WIDTHS, 2000];
+const AVIF_QUALITY = 50;
 const FORMATS = {
-  avif: (img) => img.avif({ quality: 50, effort: 4 }),
+  avif: (img, entry) => img.avif({ quality: entry.avifQuality ?? AVIF_QUALITY, effort: 4 }),
   webp: (img) => img.webp({ quality: 72, effort: 4 }),
   jpg: (img) => img.jpeg({ quality: 78, mozjpeg: true, progressive: true }),
 };
@@ -88,7 +90,7 @@ for (const entry of catalog) {
   const hash = createHash('sha1')
     .update(PIPELINE_VERSION)
     .update(bytes)
-    .update(JSON.stringify([entry.category, WIDTHS, HERO_WIDTHS, LQIP_WIDTH]))
+    .update(JSON.stringify([entry.category, ...(entry.avifQuality ? [entry.avifQuality] : []), WIDTHS, HERO_WIDTHS, LQIP_WIDTH]))
     .digest('hex')
     .slice(0, 8);
 
@@ -142,7 +144,7 @@ async function encode(entry, bytes, hash) {
     for (const w of formatWidths(widths, format)) {
       const resized = base.clone().resize({ width: w, withoutEnlargement: true });
       const file = join(outDir, fileName(entry.slug, w, hash, format));
-      const info = await apply(resized.clone()).toFile(file);
+      const info = await apply(resized.clone(), entry).toFile(file);
       if (format === 'avif') avifBytes[w] = info.size;
       const out = await sharp(file).metadata();
       if (out.exif || out.icc || out.xmp || out.iptc) fail([`${file}: metadata was not stripped`]);

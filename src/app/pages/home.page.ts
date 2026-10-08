@@ -1,13 +1,14 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
-import { SITE_CONFIG } from '../core/site.config';
+import { Hero } from '../sections/hero/hero';
 
 /**
  * Section shells so the header anchors resolve. Each one is replaced by its real section component
- * in Step 6 (6a hero, 6b restaurant, ...).
+ * in Step 6 (6b restaurant, ...).
  */
 @Component({
   selector: 'app-home-page',
+  imports: [Hero],
   changeDetection: ChangeDetectionStrategy.OnPush,
   styles: `
     section {
@@ -16,12 +17,7 @@ import { SITE_CONFIG } from '../core/site.config';
   `,
   template: `
     <main id="main" tabindex="-1">
-      <section id="home" class="container section">
-        <h1 i18n="@@home.title">Agriturismo Cascina Ronchi</h1>
-        <p i18n="@@home.tagline">
-          Capre, cucina di casa e ospitalità a {{ city }}, sulle colline bergamasche.
-        </p>
-      </section>
+      <app-hero />
       <section id="ristorante" class="container section">
         <h2 i18n="@@section.restaurant.title">Ristorante</h2>
       </section>
@@ -46,6 +42,4 @@ import { SITE_CONFIG } from '../core/site.config';
     </main>
   `,
 })
-export class HomePage {
-  protected readonly city = SITE_CONFIG.address.city;
-}
+export class HomePage {}
