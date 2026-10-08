@@ -72,13 +72,15 @@ a {
   }
 }
 
-// Makes room for the longer "Prenota un tavolo" label on narrow phones.
-.is-table .cta__book {
-  min-width: 0;
-  padding-inline: var(--space-3);
+// Makes room for the longer "Prenota un tavolo" label on phones (the desktop pill keeps its shape).
+@media (max-width: 47.99rem) {
+  .is-table .cta__book {
+    min-width: 0;
+    padding-inline: var(--space-3);
 
-  app-icon {
-    display: none;
+    app-icon {
+      display: none;
+    }
   }
 }
 

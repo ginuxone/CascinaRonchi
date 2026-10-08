@@ -24,8 +24,9 @@ const HERO_CTA_SELECTOR = '[data-hero-cta]';
 
 /**
  * Booking CTA that follows the visitor: a bottom-right pill on desktop, a bottom bar with a WhatsApp
- * shortcut on mobile (a table request inside the restaurant section). Hidden until the hero CTA leaves the viewport, then it stays. Pages without a
- * hero CTA show it straight away. Hidden on the server, so it never flashes before hydration.
+ * shortcut on mobile (a table request inside the restaurant section). Hidden until the hero CTA
+ * leaves the viewport, then it stays. Pages without a hero CTA show it straight away. Hidden on the
+ * server, so it never flashes before hydration.
  */
 @Component({
   selector: 'app-floating-cta',
@@ -48,11 +49,9 @@ const HERO_CTA_SELECTOR = '[data-hero-cta]';
         target="_blank"
         rel="noopener"
       >
+        <app-icon name="whatsapp" [label]="inRestaurant() ? undefined : 'WhatsApp'" />
         @if (inRestaurant()) {
-          <app-icon name="whatsapp" />
           <span i18n="@@restaurant.cta.table">Prenota un tavolo</span>
-        } @else {
-          <app-icon name="whatsapp" label="WhatsApp" />
         }
         <span class="visually-hidden" i18n="@@cta.newTab">(si apre in una nuova scheda)</span>
       </a>
