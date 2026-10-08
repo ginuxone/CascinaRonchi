@@ -14,9 +14,8 @@ import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
 
 import { tableRequestUrl } from '../../content/table-request';
-import { CURRENT_LOCALE } from '../../core/locale';
 import { ScrollSpy } from '../../core/scroll-spy.service';
-import { bookingUrl, whatsappUrl } from '../../core/site.config';
+import { SITE_CONFIG, whatsappUrl } from '../../core/site.config';
 import { Icon } from '../../shared/icon/icon';
 
 /** Marks the hero's own booking button; the floating CTA waits until it has scrolled out of view. */
@@ -59,7 +58,7 @@ const HERO_CTA_SELECTOR = '[data-hero-cta]';
   `,
 })
 export class FloatingCta {
-  protected readonly bookingHref = bookingUrl(inject(CURRENT_LOCALE));
+  protected readonly bookingHref = SITE_CONFIG.bookingUrl;
   protected readonly whatsappHref = whatsappUrl();
   protected readonly tableHref = tableRequestUrl();
   /** On mobile the secondary action becomes a table request while the restaurant section is being read. */

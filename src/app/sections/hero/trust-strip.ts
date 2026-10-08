@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 
 import { CURRENT_LOCALE } from '../../core/locale';
-import { bookingUrl, SITE_CONFIG } from '../../core/site.config';
+import { bookingComUrl, SITE_CONFIG } from '../../core/site.config';
 
 const { ratings } = SITE_CONFIG;
 
@@ -47,7 +47,7 @@ export class TrustStrip {
 
   protected readonly items = [
     { name: 'Google', ...ratings.google },
-    { name: 'Booking.com', ...ratings.booking, url: bookingUrl(this.locale) },
+    { name: 'Booking.com', ...ratings.booking, url: bookingComUrl(this.locale) },
     { name: 'Tripadvisor', ...ratings.tripadvisor },
     { name: 'agriturismo.it', ...ratings.agriturismoIt },
   ];

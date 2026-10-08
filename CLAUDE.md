@@ -28,7 +28,7 @@ Storytelling website for the agriturismo **Cascina Ronchi** (Palazzago, BG). The
 - Restaurant is **by reservation only** and open to non-guests.
 - Missing facts are marked `[[DA COMPLETARE]]` (or `[[TODO]]` in plan/brief text). They must never reach a build. The legal `[[P.IVA]]` and `[[CIN]]` placeholders are allowed until Step 11.
 - Ratings are shown as plain text with links. **No `aggregateRating`/`review` in JSON-LD.**
-- Booking CTA uses the clean Booking.com property URL with only the locale suffix. No session or tracking parameters.
+- Booking CTA (hero and floating) opens the agriturismo.it listing, `SITE_CONFIG.bookingUrl`. Clean URL, no session or tracking parameters. The Booking.com link (with its locale suffix) stays only in the trust strip.
 - NAP (name, address, phone) must be identical everywhere.
 
 ## SEO conventions
