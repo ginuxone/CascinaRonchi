@@ -1,8 +1,7 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
-import { CURRENT_LOCALE } from '../../core/locale';
 import { HOME_SECTION_ID } from '../../core/sections';
-import { bookingUrl } from '../../core/site.config';
+import { SITE_CONFIG } from '../../core/site.config';
 import { ResponsiveImage } from '../../shared/responsive-image/responsive-image';
 import { Pillars } from './pillars';
 import { TrustStrip } from './trust-strip';
@@ -49,5 +48,5 @@ import { TrustStrip } from './trust-strip';
 })
 export class Hero {
   protected readonly homeId = HOME_SECTION_ID;
-  protected readonly bookingHref = bookingUrl(inject(CURRENT_LOCALE));
+  protected readonly bookingHref = SITE_CONFIG.bookingUrl;
 }

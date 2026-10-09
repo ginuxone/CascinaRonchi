@@ -8,6 +8,7 @@ import { Footer } from './layout/footer/footer';
 import { Header } from './layout/header/header';
 import { LanguageBanner } from './layout/language-banner/language-banner';
 import { IconSprite } from './shared/icon/icon-sprite';
+import { inject as VercelInject} from '@vercel/analytics';
 
 @Component({
   selector: 'app-root',
@@ -27,6 +28,7 @@ export class App {
   private readonly document = inject(DOCUMENT);
 
   constructor() {
+    VercelInject();
     const splash = inject(SplashService);
     afterNextRender(() => splash.dismissWhenReady());
   }

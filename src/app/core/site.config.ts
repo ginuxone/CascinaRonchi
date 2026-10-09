@@ -3,6 +3,8 @@ export type SiteLocale = 'it' | 'en' | 'es' | 'de' | 'fr';
 export const SITE_LOCALES: readonly SiteLocale[] = ['it', 'en', 'es', 'de', 'fr'];
 
 const GOOGLE_MAPS_URL = 'https://maps.google.com/?cid=14718629685967255332';
+// Placeholder: the homepage, until the owner gives the property's own page.
+const AGRITURISMO_IT_URL = 'https://www.agriturismo.it/';
 const BOOKING_BASE_URL = 'https://www.booking.com/hotel/it/agriturismo-cascina-ronchi';
 
 const BOOKING_LOCALE_SUFFIX: Record<SiteLocale, string> = {
@@ -27,6 +29,8 @@ export const SITE_CONFIG = {
   },
   geo: { latitude: 45.7376865, longitude: 9.5495237 },
   googleMapsUrl: GOOGLE_MAPS_URL,
+  /** Where every "Prenota" button sends the visitor (agriturismo.it). Clean URL, no tracking parameters. */
+  bookingUrl: AGRITURISMO_IT_URL,
   email: 'info@cascinaronchi.it',
   phone: { display: '+39 035 549 574', tel: '+39035549574' },
   whatsapp: { display: '+39 349 645 3018', number: '393496453018' },
@@ -44,21 +48,21 @@ export const SITE_CONFIG = {
   ratings: {
     asOf: '2026-10-01',
     google: { score: '4.6★', count: 273, url: GOOGLE_MAPS_URL },
-    /** The Booking.com link depends on the locale, see `bookingUrl()`. */
+    /** The Booking.com link depends on the locale, see `bookingComUrl()`. */
     booking: { score: '9.3', count: 47 },
     tripadvisor: {
       score: '4.8',
       count: 50,
       url: 'https://www.tripadvisor.it/Hotel_Review-g187830-d1804222-Reviews-or25-Cascina_Ronchi-Bergamo_Province_of_Bergamo_Lombardy.html',
     },
-    agriturismoIt: { score: '4.9', count: 127, url: 'https://www.agriturismo.it/' },
+    agriturismoIt: { score: '4.9', count: 127, url: AGRITURISMO_IT_URL },
   },
   vatNumber: '[[P.IVA]]',
   cin: '[[CIN]]',
 } as const;
 
 /** Clean Booking.com property URL with only the locale suffix (no session or tracking parameters). */
-export function bookingUrl(locale: SiteLocale): string {
+export function bookingComUrl(locale: SiteLocale): string {
   return `${BOOKING_BASE_URL}.${BOOKING_LOCALE_SUFFIX[locale]}.html`;
 }
 

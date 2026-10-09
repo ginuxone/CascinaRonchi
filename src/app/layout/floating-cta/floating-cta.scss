@@ -58,6 +58,32 @@ a {
   }
 }
 
+.cta__whatsapp--table {
+  flex: none;
+  width: auto;
+  padding-inline: var(--space-3);
+  white-space: nowrap;
+
+  // Not enough room for the icon next to the label on the narrowest phones.
+  @media (max-width: 23.99rem) {
+    app-icon {
+      display: none;
+    }
+  }
+}
+
+// Makes room for the longer "Prenota un tavolo" label on phones (the desktop pill keeps its shape).
+@media (max-width: 47.99rem) {
+  .is-table .cta__book {
+    min-width: 0;
+    padding-inline: var(--space-3);
+
+    app-icon {
+      display: none;
+    }
+  }
+}
+
 .cta__long {
   display: none;
 }
