@@ -1,15 +1,16 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
+import { Events } from '../sections/events/events';
 import { Hero } from '../sections/hero/hero';
 import { Restaurant } from '../sections/restaurant/restaurant';
 
 /**
  * Section shells so the header anchors resolve. Each one is replaced by its real section component
- * in Step 6 (6c events, ...).
+ * in Step 6 (6d rooms, ...).
  */
 @Component({
   selector: 'app-home-page',
-  imports: [Hero, Restaurant],
+  imports: [Hero, Restaurant, Events],
   changeDetection: ChangeDetectionStrategy.OnPush,
   styles: `
     section {
@@ -20,9 +21,7 @@ import { Restaurant } from '../sections/restaurant/restaurant';
     <main id="main" tabindex="-1">
       <app-hero />
       <app-restaurant />
-      <section id="eventi" class="container section">
-        <h2 i18n="@@section.events.title">Eventi e cerimonie</h2>
-      </section>
+      <app-events />
       <section id="camere" class="container section">
         <h2 i18n="@@section.rooms.title">Camere</h2>
       </section>

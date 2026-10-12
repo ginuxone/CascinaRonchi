@@ -34,6 +34,8 @@ export const SITE_CONFIG = {
   email: 'info@cascinaronchi.it',
   phone: { display: '+39 035 549 574', tel: '+39035549574' },
   whatsapp: { display: '+39 349 645 3018', number: '393496453018' },
+  /** Approximate seats for the restaurant and for events, each indoors and outdoors. */
+  capacity: { indoor: 30, outdoor: 30 },
   hours: {
     restaurant: {
       monThu: { dinner: '19:30–22:00' },
