@@ -71,9 +71,9 @@ import { RevealDirective } from '../../shared/reveal.directive';
             <dd i18n="@@events.details.when.text">
               Almeno un paio di giorni prima, così possiamo preparare ogni richiesta.
             </dd>
-            <dt i18n="@@events.details.rooms.label">Camere</dt>
-            <dd i18n="@@events.details.rooms.text">
-              Si possono prenotare, ma la cascina non è ad uso esclusivo.
+            <dt i18n="@@events.details.exclusive.label">Uso esclusivo</dt>
+            <dd i18n="@@events.details.exclusive.text">
+              No: la cascina non si può prenotare per intero. Le camere sì, una per una.
             </dd>
           </dl>
         </div>
