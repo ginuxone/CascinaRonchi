@@ -48,7 +48,7 @@ import { RevealDirective } from '../../shared/reveal.directive';
             </li>
             <li appReveal>
               <strong i18n="@@goats.chain.milking.title">La mungitura</strong>
-              <span i18n="@@goats.chain.milking.text">Il latte è fresco e viene dalle nostre capre.</span>
+              <span i18n="@@goats.chain.milking.text">Il latte viene dalle nostre capre.</span>
             </li>
             <li appReveal>
               <strong i18n="@@goats.chain.cheese.title">Il formaggio</strong>
@@ -56,11 +56,8 @@ import { RevealDirective } from '../../shared/reveal.directive';
             </li>
             <li appReveal>
               <strong i18n="@@goats.chain.plate.title">Il tuo piatto</strong>
-              <span>
-                <a routerLink="/" fragment="ristorante" i18n="@@goats.chain.plate.text"
-                  >Lo trovi in tavola, al ristorante.</a
-                >
-              </span>
+              <span i18n="@@goats.chain.plate.text">Lo trovi in tavola, al ristorante.</span>
+              <a routerLink="/" fragment="ristorante" i18n="@@goats.chain.plate.link">Vai al ristorante</a>
             </li>
           </ol>
         </div>
