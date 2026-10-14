@@ -34,7 +34,7 @@ import { RevealDirective } from '../../shared/reveal.directive';
             pasticcini e i dolci li facciamo noi.
           </p>
           <p i18n="@@restaurant.story.rooms">
-            Le sale sono calde e accolgono fino a 20 persone.
+            Le sale sono calde e accolgono circa {{ site.capacity.indoor }} persone.
           </p>
 
           <div class="actions">
