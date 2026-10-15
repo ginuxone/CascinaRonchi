@@ -1,0 +1,71 @@
+@use '../../../styles/mixins' as *;
+
+:host {
+  display: block;
+}
+
+h2 {
+  margin: 0 0 var(--space-4);
+}
+
+.lead {
+  max-width: 42rem;
+  margin: 0 0 var(--space-7);
+}
+
+.timeline {
+  position: relative;
+  display: grid;
+  gap: var(--space-7);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  // The vertical line the entries hang from (desktop only).
+  @include up(md) {
+    &::before {
+      content: '';
+      position: absolute;
+      inset-block: 0;
+      inset-inline-start: 50%;
+      width: 2px;
+      background: var(--color-border);
+    }
+  }
+
+  li {
+    display: grid;
+    gap: var(--space-4);
+
+    @include up(md) {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-8);
+      align-items: center;
+
+      // Image on the other side every second entry.
+      &:nth-child(even) .timeline__image {
+        order: -1;
+      }
+    }
+  }
+
+  h3 {
+    margin: 0 0 var(--space-2);
+  }
+
+  p {
+    margin: 0 0 var(--space-3);
+  }
+}
+
+.timeline__when {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.timeline__image {
+  border-radius: var(--radius-md);
+}
