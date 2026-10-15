@@ -1,24 +1,19 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
+import { Contact } from '../sections/contact/contact';
 import { Events } from '../sections/events/events';
+import { Family } from '../sections/family/family';
 import { Goats } from '../sections/goats/goats';
 import { Hero } from '../sections/hero/hero';
+import { History } from '../sections/history/history';
 import { Restaurant } from '../sections/restaurant/restaurant';
 import { Rooms } from '../sections/rooms/rooms';
 
-/**
- * Section shells so the header anchors resolve. Each one is replaced by its real section component
- * in Step 6 (6f history, ...).
- */
+/** The one-page story: every section in scroll order, matching the header nav. */
 @Component({
   selector: 'app-home-page',
-  imports: [Hero, Restaurant, Events, Rooms, Goats],
+  imports: [Hero, Restaurant, Events, Rooms, Goats, History, Family, Contact],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  styles: `
-    section {
-      scroll-margin-top: var(--space-8);
-    }
-  `,
   template: `
     <main id="main" tabindex="-1">
       <app-hero />
@@ -26,15 +21,9 @@ import { Rooms } from '../sections/rooms/rooms';
       <app-events />
       <app-rooms />
       <app-goats />
-      <section id="storia" class="container section">
-        <h2 i18n="@@section.history.title">La nostra storia</h2>
-      </section>
-      <section id="famiglia" class="container section">
-        <h2 i18n="@@section.family.title">La famiglia</h2>
-      </section>
-      <section id="contatti" class="container section">
-        <h2 i18n="@@section.contact.title">Contatti</h2>
-      </section>
+      <app-history />
+      <app-family />
+      <app-contact />
     </main>
   `,
 })

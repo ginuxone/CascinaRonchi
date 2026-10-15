@@ -76,3 +76,9 @@ export function whatsappUrl(message?: string): string {
   const base = `https://wa.me/${SITE_CONFIG.whatsapp.number}`;
   return message ? `${base}?text=${encodeURIComponent(message)}` : base;
 }
+
+/** Google Maps directions to the farm, from wherever the visitor is. */
+export function directionsUrl(): string {
+  const { latitude, longitude } = SITE_CONFIG.geo;
+  return `https://www.google.com/maps/dir/?api=1&destination=${latitude},${longitude}`;
+}
