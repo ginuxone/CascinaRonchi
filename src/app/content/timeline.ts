@@ -40,7 +40,7 @@ export const TIMELINE: readonly TimelineEntry[] = [
     id: 'restauro',
     when: $localize`:@@timeline.restoration.when:Negli ultimi anni`,
     title: $localize`:@@timeline.restoration.title:Il restauro`,
-    text: $localize`:@@timeline.restoration.text:La cascina è stata restaurata da poco. Dentro si vedono ancora la pietra a vista e il vecchio camino.`,
+    text: $localize`:@@timeline.restoration.text:La cascina è stata restaurata da poco.`,
     image: 'cortile-gerani',
   },
   {

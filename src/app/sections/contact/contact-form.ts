@@ -26,6 +26,9 @@ import { Icon } from '../../shared/icon/icon';
 type Status = 'whatsapp' | 'email' | null;
 
 const MAX_MESSAGE_LENGTH = 800;
+/** Some mail clients truncate longer mailto links (ADR-06). */
+const MAILTO_BODY_LIMIT = 1800;
+const COPIED_MESSAGE_MS = 3000;
 
 /**
  * The contact form: it only builds a message and hands it to the visitor's own WhatsApp or email app
@@ -83,7 +86,7 @@ const MAX_MESSAGE_LENGTH = 800;
       @if (selected().dateLabel; as dateLabel) {
         <div class="field">
           <label for="contact-date">{{ dateLabel }}</label>
-          <input id="contact-date" type="text" formControlName="date" />
+          <input id="contact-date" type="text" autocomplete="off" formControlName="date" />
         </div>
       }
 
@@ -196,8 +199,16 @@ export class ContactForm {
   protected readonly selected = computed(() => contactType(this.type()));
 
   constructor() {
-    // "Altro" has no other fields, so the message itself is required.
     this.form.controls.type.valueChanges.pipe(takeUntilDestroyed(inject(DestroyRef))).subscribe((type) => {
+      // A field that disappears must not keep a value (or an error) the visitor can no longer see.
+      const { dateLabel, guestsLabel } = contactType(type);
+      if (!dateLabel) {
+        this.form.controls.date.reset();
+      }
+      if (!guestsLabel) {
+        this.form.controls.guests.reset();
+      }
+      // "Altro" has no other fields, so the message itself is required.
       const message = this.form.controls.message;
       message.setValidators(
         type === 'other'
@@ -226,7 +237,7 @@ export class ContactForm {
       return;
     }
     const subject = encodeURIComponent(this.selected().subject);
-    const body = encodeURIComponent(this.message());
+    const body = encodeURIComponent(this.emailBody());
     this.document.location.href = `mailto:${SITE_CONFIG.email}?subject=${subject}&body=${body}`;
     this.status.set('email');
   }
@@ -235,6 +246,7 @@ export class ContactForm {
     try {
       await this.document.defaultView?.navigator.clipboard.writeText(SITE_CONFIG.email);
       this.copied.set(true);
+      this.document.defaultView?.setTimeout(() => this.copied.set(false), COPIED_MESSAGE_MS);
     } catch {
       // Clipboard blocked: the address is on screen and in the links, so nothing else to do.
       this.copied.set(false);
@@ -243,6 +255,18 @@ export class ContactForm {
 
   private message(): string {
     return buildContactMessage(this.form.getRawValue(), this.locale);
+  }
+
+  /** The message for a mailto link: the free text is shortened until the encoded body fits the limit. */
+  private emailBody(): string {
+    const values = this.form.getRawValue();
+    let text = values.message;
+    let body = buildContactMessage(values, this.locale);
+    while (encodeURIComponent(body).length > MAILTO_BODY_LIMIT && text.length > 0) {
+      text = text.slice(0, Math.max(0, text.length - 50));
+      body = buildContactMessage({ ...values, message: text }, this.locale);
+    }
+    return body;
   }
 
   /** Marks every field as touched so the errors show, and moves focus to the first invalid one. */
